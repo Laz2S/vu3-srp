@@ -32,7 +32,7 @@ import CompositionCatTips from './pages/CompositionApi/component_print.js'
 import SrpCatTips from './pages/Srp/component_print.js'
 import CatTipsController from './pages/Srp/controller_print.js'
 import SrpStyle from './pages/Srp/style_print.js'
-import CompositionService from './services/Cat/service_print.js'
+import CompositionService from '../service/Cat/service_print.js'
 import SrpService from './pages/Srp/service_print.js'
 import DescriptionItem from './DescriptionItem.vue'
 
@@ -57,8 +57,8 @@ export default {
     const subtitle = ref('Trabalhando diretamente com');
     const path = computed(() => {
       return props.type == 'composition'
-        ? '/src/components/pages/CompositionApi/'
-        : '/src/components/pages/SrpApi/';
+        ? '/vue-base/components/pages/CompositionApi/'
+        : '/vue-base/components/pages/SrpApi/';
     });
     const catTips = ref(props.type == 'composition' ? CompositionCatTips : SrpCatTips);
     const controller = ref(CatTipsController);
@@ -75,7 +75,7 @@ export default {
           },
           {
             component: 'service.js',
-            path: 'src/components/services/Cat/service.js',
+            path: '/vue-base/service/Cat/service.js',
             value: service.value
           }
         ];

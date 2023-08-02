@@ -8,7 +8,7 @@ const html = `<template>
 </template>
 
 <script>
-import { getFact } from '../../services/Cat/service.js';
+import { getFact } from '../../../service/Cat/service.js';
 
 export default {
   name: 'CatTips',
