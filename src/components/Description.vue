@@ -22,7 +22,7 @@
       <img alt="Vue logo" class="logo" src="../assets/logo.png" width="25" height="25" />
     </template>
     <template #heading>Body of file {{ object.component }}</template>
-    <div v-if="object.name == 'button'" class="content-block">
+    <div class="content-block">
       {{ object.value }}
     </div>
   </DescriptionItem>
