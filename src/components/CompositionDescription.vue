@@ -12,7 +12,7 @@ import Description from './Description.vue'
     </header>
 
     <main>
-      <Description title="Composition Api" type="composition" :components="['button']" />
+      <Description title="Composition Api" type="composition" />
     </main>
   </div>
 </template>

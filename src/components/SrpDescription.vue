@@ -12,10 +12,7 @@ import Description from './Description.vue'
     </header>
 
     <main>
-      <Description
-        title="Single Responsability Protocol"
-        :components="['button', 'controller', 'style']"
-      />
+      <Description title="Single Responsability Protocol" type="srp"/>
     </main>
   </div>
 </template>
