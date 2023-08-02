@@ -7,7 +7,7 @@ tags:
 ---
 
 
-# Vite + Vue 3 + Typescript Example
+# Vite + Vue 3
 This example utilises vite for static site generation
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/ymiqGQ?referralCode=OH27A5)
