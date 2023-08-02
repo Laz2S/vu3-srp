@@ -40,11 +40,6 @@ export default {
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
-}
-
-.logo {
-  margin: 0 2rem 0 0;
 }
 
 h1 {

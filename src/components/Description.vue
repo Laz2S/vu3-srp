@@ -22,18 +22,10 @@
       <img alt="Vue logo" class="logo" src="../assets/logo.png" width="25" height="25" />
     </template>
     <template #heading>Body of file {{ object.component }}</template>
-    <div
-      style="
-        background-color: #f2f9ff;
-        margin-bottom: 8px;
-        padding: 8px 12px 12px;
-        border-radius: 8px;
-        color: #53565b;
-        white-space: break-spaces;
-      "
-    >
+    <div v-if="object.name == 'button'" class="content-block">
       {{ object.value }}
     </div>
+    <div v-else class="content-block" v-html="object.value"/>
   </DescriptionItem>
 </template>
 
@@ -109,3 +101,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.content-block {
+  background-color: #f2f9ff;
+  margin-bottom: 8px;
+  padding: 8px 12px 12px;
+  border-radius: 8px;
+  color: #53565b;
+  white-space: break-spaces;
+}
+</style>
