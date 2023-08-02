@@ -31,7 +31,7 @@ import { ref, computed } from 'vue'
 import DescriptionItem from './DescriptionItem.vue'
 
 import CompositionCatTips from './prints/CompositionApi/component_print.js'
-import CompositionService from '../prints/CompositionApi/service_print.js'
+import CompositionService from './prints/CompositionApi/service_print.js'
 
 import SrpCatTips from './prints/Srp/component_print.js'
 import SroController from './prints/Srp/controller_print.js'
