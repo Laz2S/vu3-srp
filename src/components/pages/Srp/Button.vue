@@ -8,7 +8,8 @@
 </template>
 
 <script>
-import { ButtonController } from './controller.js'
+import { ref } from 'vue';
+import { ButtonController } from './controller.js';
 export default {
   name: 'Button',
   props: {
@@ -18,7 +19,7 @@ export default {
     }
   },
   setup(props) {
-    const controller = ref(new ButtonController(props))
+    const controller = ref(new ButtonController(props));
     return {
       controller
     }
