@@ -19,7 +19,7 @@
     <template #icon>
       <img alt="Vue logo" class="logo" src="../assets/logo.png" width="25" height="25" />
     </template>
-    <template #heading>Body of file {{ object.component }}</template>
+    <template #heading>Content of file {{ object.component }}</template>
     <div class="content-block">
       {{ object.value }}
     </div>
@@ -28,8 +28,8 @@
 
 <script>
 import { ref, computed } from 'vue'
-import CompositionButton from './pages/CompositionApi/component_print.js'
-import SrpButton from './pages/Srp/component_print.js'
+import CompositionCatTips from './pages/CompositionApi/component_print.js'
+import SrpCatTips from './pages/Srp/component_print.js'
 import CatTipsController from './pages/Srp/controller_print.js'
 import SrpStyle from './pages/Srp/style_print.js'
 import CompositionService from './services/Cat/service_print.js'
@@ -60,7 +60,7 @@ export default {
         ? '/src/components/pages/CompositionApi/'
         : '/src/components/pages/SrpApi/';
     });
-    const button = ref(props.type == 'composition' ? CompositionButton : SrpButton);
+    const catTips = ref(props.type == 'composition' ? CompositionCatTips : SrpCatTips);
     const controller = ref(CatTipsController);
     const style = ref(SrpStyle);
     const service = ref(props.type == 'composition' ? CompositionService : SrpService);
@@ -69,13 +69,11 @@ export default {
       if (props.type == 'composition') {
         dictionary = [
           {
-            name: 'button',
-            component: 'Button.vue',
-            path: path.value + 'Button.vue',
-            value: button.value
+            component: 'CatTips.vue',
+            path: path.value + 'CatTips.vue',
+            value: catTips.value
           },
           {
-            name: 'service',
             component: 'service.js',
             path: 'src/components/services/Cat/service.js',
             value: service.value
@@ -85,25 +83,21 @@ export default {
       } else {
         dictionary = [
           {
-            name: 'button',
-            component: 'Button.vue',
-            path: path.value + 'Button.vue',
-            value: button.value
+            component: 'CatTips.vue',
+            path: path.value + 'CatTips.vue',
+            value: catTips.value
           },
           {
-            name: 'controller',
             component: 'controller.js',
             path: path.value + 'controller.js',
             value: controller.value
           },
           {
-            name: 'style',
             component: 'style.css',
             path: path.value + 'style.css',
             value: style.value
           },
           {
-            name: 'service',
             component: 'service.js',
             path: path.value + 'service.js',
             value: service.value
