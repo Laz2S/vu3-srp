@@ -34,7 +34,6 @@ const html = `.body {
       text-align: left;
     }
   }
-  
 `;
 
 export default html;

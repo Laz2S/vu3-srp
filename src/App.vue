@@ -13,8 +13,8 @@
 
 <script>
 import { ref } from 'vue'
-import SrpDescription from './components/SrpDescription.vue'
-import CompositionDescription from './components/CompositionDescription.vue'
+import SrpDescription from './vue-base/components/SrpDescription.vue'
+import CompositionDescription from './vue-base/components/CompositionDescription.vue'
 
 export default {
   components: {

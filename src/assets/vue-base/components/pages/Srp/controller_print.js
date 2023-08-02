@@ -11,7 +11,6 @@ export class CatTipsController {
     alert(message);
   }
 }
-
 `;
 
 export default html;
