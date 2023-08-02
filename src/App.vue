@@ -1,21 +1,61 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div>
+    <div style="display: flex; gap: 8px">
+      <button :class="[{ active: !show }]" @click="showComposition">View Composition Api</button>
+      <button :class="[{ active: show }]" @click="showSrp">
+        View Single Responsability Protocol
+      </button>
+    </div>
+    <SrpDescription v-if="show" />
+    <CompositionDescription v-else />
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<script>
+import { ref } from 'vue'
+import SrpDescription from './components/SrpDescription.vue'
+import CompositionDescription from './components/CompositionDescription.vue'
+
+export default {
+  components: {
+    SrpDescription,
+    CompositionDescription
+  },
+  setup() {
+    const show = ref(false)
+    const showComposition = () => {
+      show.value = false
+    }
+    const showSrp = () => {
+      show.value = true
+    }
+    return {
+      show,
+      showComposition,
+      showSrp
+    }
+  }
+}
+</script>
+
+<style scoped>
+button {
+  border: 2px solid #0068b3;
+  cursor: pointer;
+  font-family:
+    Open Sans,
+    sans-serif;
+  font-weight: 600;
+  outline: none !important;
+  transition: all 0.3s linear;
+  border-radius: 16px;
+  font-size: 16px;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.active {
+  background-color: #0068b3;
+  color: #fff;
 }
 </style>
