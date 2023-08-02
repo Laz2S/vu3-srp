@@ -93,14 +93,14 @@ export default {
             value: controller.value
           },
           {
-            component: 'style.css',
-            path: path.value + 'style.css',
-            value: style.value
-          },
-          {
             component: 'service.js',
             path: path.value + 'service.js',
             value: service.value
+          },
+          {
+            component: 'style.css',
+            path: path.value + 'style.css',
+            value: style.value
           }
         ];
       }
