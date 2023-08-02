@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <img alt="Vue logo" class="logo" src="../../../assets/logo.png" width="55" height="55" />
+    <img alt="Vue logo" class="logo" src="../../../../assets/logo.png" width="55" height="55" />
     <button class="greetings" @click="controller.showMsg">
       <h2 class="green">{{ msg }}</h2>
     </button>
