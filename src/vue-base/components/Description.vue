@@ -1,14 +1,14 @@
 <template>
   <DescriptionItem>
     <template #icon>
-      <img alt="Vue logo" class="logo" src="../assets/logo.png" width="25" height="25" />
+      <img alt="Vue logo" class="logo" src="../../assets/logo.png" width="25" height="25" />
     </template>
     <template #heading>{{ title }}</template>
     Architecture
   </DescriptionItem>
   <DescriptionItem>
     <template #icon>
-      <img alt="Vue logo" class="logo" src="../assets/logo.png" width="25" height="25" />
+      <img alt="Vue logo" class="logo" src="../../assets/logo.png" width="25" height="25" />
     </template>
     <template #heading>Files</template>
     <ul>
@@ -17,7 +17,7 @@
   </DescriptionItem>
   <DescriptionItem v-for="(object, index) in filteredComponents" :key="index">
     <template #icon>
-      <img alt="Vue logo" class="logo" src="../assets/logo.png" width="25" height="25" />
+      <img alt="Vue logo" class="logo" src="../../assets/logo.png" width="25" height="25" />
     </template>
     <template #heading>Content of file {{ object.component }}</template>
     <div class="content-block">
