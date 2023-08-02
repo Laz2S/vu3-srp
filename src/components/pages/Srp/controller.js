@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { getFacts } from './controller.js';
+import { getFacts } from './service.js';
 
 export class ButtonController {
   constructor(props) {
