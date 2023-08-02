@@ -7,7 +7,7 @@ import Description from './Description.vue'
   <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 0 2rem">
     <header>
       <div>
-        <Button msg="You did it!" />
+        <Button msg="Look out for some Cat tips!" />
       </div>
     </header>
 

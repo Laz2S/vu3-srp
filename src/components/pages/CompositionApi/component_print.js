@@ -1,6 +1,6 @@
 const html = `<template>
   <div class="body">
-    <img alt="Vue logo" class="logo" src="../../../assets/logo.png" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="../../../assets/logo.png" width="55" height="55" />
     <button class="greetings" @click="showMsg">
       <h1 class="green">{{ msg }}</h1>
     </button>
@@ -8,8 +8,10 @@ const html = `<template>
 </template>
 
 <script>
+import { getFact } from '../../services/Cat/service.js';
+
 export default {
-  name: 'Button',
+  name: 'CatTips',
   props: {
     msg: {
       type: String,
@@ -17,8 +19,9 @@ export default {
     }
   },
   setup(props) {
-    const showMsg = () => {
-      alert(props.msg)
+    const showMsg = async () => {
+      let message = await getFact();
+      alert(message);
     }
     return {
       showMsg
