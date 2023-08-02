@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div style="display: flex;justify-content: center;">
+      <a href="https://github.com/Laz2S/vu3-srp">GIT REPOSITORY</a>
+    </div>
     <div style="display: flex; gap: 8px">
       <button :class="[{ active: !show }]" @click="showComposition">View Composition Api</button>
       <button :class="[{ active: show }]" @click="showSrp">
