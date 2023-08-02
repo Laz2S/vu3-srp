@@ -1,14 +1,14 @@
 <template>
     <DescriptionItem>
       <template #icon>
-        <DocumentationIcon />
+        <img alt="Vue logo" class="logo" src="../../../assets/logo.png" width="25" height="25" />
       </template>
       <template #heading>{{ title }}</template>
       Architecture
     </DescriptionItem>
     <DescriptionItem>
       <template #icon>
-        <DocumentationIcon />
+        <img alt="Vue logo" class="logo" src="../../../assets/logo.png" width="25" height="25" />
       </template>
       <template #heading>Files</template>
       <ul>
@@ -19,7 +19,7 @@
     </DescriptionItem>
     <DescriptionItem v-for="(object, index) in filteredComponents" :key="index">
       <template #icon>
-        <DocumentationIcon />
+        <img alt="Vue logo" class="logo" src="../../../assets/logo.png" width="25" height="25" />
       </template>
       <template #heading>Body of file {{ object.component }}</template>
       <div
@@ -44,12 +44,10 @@
   import { ButtonController } from './pages/Srp/controller.js'
   import SrpStyle from './pages/Srp/style.css'
   import DescriptionItem from './DescriptionItem.vue'
-  import DocumentationIcon from '../assets/icons/IconDocumentation.vue'
   
   export default {
     components: {
-      DescriptionItem,
-      DocumentationIcon
+      DescriptionItem
     },
     name: 'Description',
     props: {
