@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+const html = `import { ref } from 'vue'
 import { getFact } from './service.js';
 
 export class ButtonController {
@@ -11,3 +11,7 @@ export class ButtonController {
     alert(message)
   }
 }
+
+`;
+
+export default html;
