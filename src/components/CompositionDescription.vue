@@ -1,5 +1,5 @@
 <script setup>
-import Button from './pages/CompositionApi/Button.vue'
+import Button from './pages/CompositionApi/CatTips.vue'
 import Description from './Description.vue'
 </script>
 
