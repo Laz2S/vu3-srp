@@ -34,6 +34,7 @@ import CompositionButton from './pages/CompositionApi/component_print.js'
 import SrpButton from './pages/Srp/component_print.js'
 import { ButtonController } from './pages/Srp/controller.js'
 import SrpStyle from './pages/Srp/style.css'
+import SrpService from './pages/Srp/service.js'
 import DescriptionItem from './DescriptionItem.vue'
 
 export default {
@@ -63,11 +64,12 @@ export default {
     const components = computed(() => {
       return props.type == 'composition'
         ? ['button']
-        : ['button', 'controller', 'style'];
+        : ['button', 'controller', 'service', 'style'];
     });
-    const button = ref(props.type == 'composition' ? CompositionButton : SrpButton)
-    const controller = ref(ButtonController)
-    const style = ref(SrpStyle)
+    const button = ref(props.type == 'composition' ? CompositionButton : SrpButton);
+    const controller = ref(ButtonController);
+    const style = ref(SrpStyle);
+    const service = ref(SrpService);
     const filteredComponents = computed(() => {
       let dictionary = [
         {
@@ -84,6 +86,11 @@ export default {
           name: 'style',
           component: 'style.css',
           value: style.value
+        },
+        {
+          name: 'service',
+          component: 'service.js',
+          value: service.value
         }
       ]
       return dictionary.filter((object) => {
