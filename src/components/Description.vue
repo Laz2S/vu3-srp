@@ -34,7 +34,7 @@ import CompositionButton from './pages/CompositionApi/component_print.js'
 import SrpButton from './pages/Srp/component_print.js'
 import { ButtonController } from './pages/Srp/controller.js'
 import SrpStyle from './pages/Srp/style.css'
-import SrpService from './pages/Srp/service.js'
+import SrpService from './pages/Srp/service_print.js'
 import DescriptionItem from './DescriptionItem.vue'
 
 export default {
