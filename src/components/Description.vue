@@ -25,7 +25,6 @@
     <div v-if="object.name == 'button'" class="content-block">
       {{ object.value }}
     </div>
-    <div v-else class="content-block" v-html="object.value"/>
   </DescriptionItem>
 </template>
 
