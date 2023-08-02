@@ -28,13 +28,15 @@
 
 <script>
 import { ref, computed } from 'vue'
-import CompositionCatTips from './pages/CompositionApi/component_print.js'
-import SrpCatTips from './pages/Srp/component_print.js'
-import CatTipsController from './pages/Srp/controller_print.js'
-import SrpStyle from './pages/Srp/style_print.js'
-import CompositionService from '../service/Cat/service_print.js'
-import SrpService from './pages/Srp/service_print.js'
 import DescriptionItem from './DescriptionItem.vue'
+
+import CompositionCatTips from './prints/CompositionApi/component_print.js'
+import CompositionService from '../prints/CompositionApi/service_print.js'
+
+import SrpCatTips from './prints/Srp/component_print.js'
+import SroController from './prints/Srp/controller_print.js'
+import SrpStyle from './prints/Srp/style_print.js'
+import SrpService from './prints/Srp/service_print.js'
 
 export default {
   components: {
@@ -61,7 +63,7 @@ export default {
         : '/vue-base/components/pages/SrpApi/';
     });
     const catTips = ref(props.type == 'composition' ? CompositionCatTips : SrpCatTips);
-    const controller = ref(CatTipsController);
+    const controller = ref(SroController);
     const style = ref(SrpStyle);
     const service = ref(props.type == 'composition' ? CompositionService : SrpService);
     const filteredComponents = computed(() => {
