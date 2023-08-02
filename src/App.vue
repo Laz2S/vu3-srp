@@ -6,7 +6,7 @@
     <div style="display: flex; gap: 8px">
       <button :class="[{ active: !show }]" @click="showComposition">View Composition Api</button>
       <button :class="[{ active: show }]" @click="showSrp">
-        View Single Responsability Protocol
+        View Single Responsibility Protocol
       </button>
     </div>
     <SrpDescription v-if="show" />
