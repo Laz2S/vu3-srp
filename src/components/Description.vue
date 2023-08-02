@@ -30,7 +30,7 @@
 import { ref, computed } from 'vue'
 import CompositionButton from './pages/CompositionApi/component_print.js'
 import SrpButton from './pages/Srp/component_print.js'
-import { ButtonController } from './pages/Srp/controller_print.js'
+import ButtonController from './pages/Srp/controller_print.js'
 import SrpStyle from './pages/Srp/style_print.js'
 import CompositionService from './services/Cat/service_print.js'
 import SrpService from './pages/Srp/service_print.js'
